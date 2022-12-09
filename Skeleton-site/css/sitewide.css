@@ -1,0 +1,28 @@
+header{display: flex;align-items: center;justify-content: center;}
+header > img {}
+.nav ul{list-style: none;text-align:center;}
+.nav ul li {margin-bottom: 0;display: inline-block;margin-left:1.2em;margin-right:1.2em;font-size:2em;
+}
+.about{margin-top:50px;}
+.rowB img{width:100%;padding-bottom:10px;}
+.rowC{margin-top:40px;}
+.projectBox {position: relative;width: 100%;}
+.projectBox:after{margin-bottom:10px;}
+.projectImage {display: block;height: auto;}
+.overlay {position: absolute;bottom: 0;background: rgb(44, 43, 43);background: rgba(255, 255, 255, 0.5); /* see-through */
+  color: #131212;width: 100%;height:100%;transition: .5s ease;opacity:0;color: rgb(12, 11, 11);font-size: 4.3vw;font-weight:400;text-align: center;}
+.projectBox:hover .overlay {opacity: 1;}
+/*Some corrections for the overlay */
+@media only screen and (max-width: 560px) and (min-width: 400px){
+.nav ul li {display: block;}
+}
+@media only screen and (max-width: 630px) and (min-width: 530px){
+ .overlay{ font-size: 10px;}
+}
+@media (min-width : 640px) {
+ .overlay{ font-size: 2vw;}
+}
+@media (min-width : 1080px) {
+.overlay{ font-size: 1.5em;}
+}
+

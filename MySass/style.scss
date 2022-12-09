@@ -1,0 +1,14 @@
+$myColor: #aa30ff;
+$myPadding: 20px;
+$thickness: 1px;
+$border: solid red;
+
+#samplepara{
+    color: $myColor;
+	padding: $myPadding+30;
+}
+
+#list1 {
+	color: $myColor;
+	border: $thickness+5 $border;
+}

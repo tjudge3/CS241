@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Accessibility Website Improvements</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+<style>
+p.lar{font-size:2em;text-align:center;font-weight:bold;}
+.featurette-divider {margin: 5rem 0;}
+hr {margin: 1rem 0;color: #000;}
+img{ display: block; margin: 0; width: 100%; max-width: none; }
+code {font-family: Consolas,"courier new";color: crimson;background-color: #f1f1f1;padding: 2px;font-size: 105%;}
+    </style>
+ <script src="$2a$12$Rxp/Rh4/g4VFIc1I0e./gOUX3Fb2JhvkfICQzskTGPndCReWqLobS.js"></script> 
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <h1>Wildlife Website Improvements</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="https://this.page.no.longer.exists">Home</a></li>
+        <li><a href="https://this.page.no.longer.exists">Original Site</a></li>
+        <li><a href="https://this.page.no.longer.exists">Revised Site</a></li>
+        <li><a href="improvements.html">Improvements</a></li>
+      </ul>
+
+      <form class="search">
+        <input type="search" name="q" placeholder="Search query" aria-label="Search Site">
+        <input type="submit" value="Go!">
+      </form>
+    </nav>
+    <main>
+      <article>
+        <h2>Accessibility Changes and Improvements</h2>
+        <p class="lar">Detailed below is information pertaining to the changes and improvments I have made from the <a href="https://accdesign-original.tjudge.repl.co/">original site</a> to the <a href="https://accessibilitydesign.tjudge.repl.co/">revised site</a>. In addition you will find data the shows the research performed, specifically in the form of screenshots.</p>
+<hr class="featurette-divider">
+<h3>Accessibility Inspector Results</h3>
+<img src="improve/accessibility-inspector.jpg" alt="Results of Accessibility Inspector Issues">
+<hr class="featurette-divider">
+<h3>Color Contrast Test</h3>
+<img src="improve/color-contrast-fail.jpg" alt="Color Contrast Failure Results">
+<img src="improve/color-contrast-suggestions.jpg" alt="Color Contrast improvement Suggestions">
+<hr class="featurette-divider">
+<h3>Semantic</h3>
+ <p>I utilized h1, h2, and h3 as well as nav, section and caption in the website to create a more logical design to the website and improved accessibility for screen readers. 
+ </p>
+<h3>CSS rule selectors Changes</h3>
+ <p>The <code>font[size="7"], font[size="6"], font[size="5"]</code> were changed to <code> h1, h2, h3</code> respectively. <code>div[class="nav"]</code> was changed simply to <code>nav</code>
+ </p>
+<h3>Image Changes</h3>
+<p>For the two images on the page, I added <code>alt</code> to explain what the images were. Additionally I added descriptions to the images in the paragraphs above each and included aria-labels.</p>
+<h3>Audio Player Changes</h3>
+<p>Previously the page simply stated "It looks like your browser doesn't support HTML5 audio players." as the error if the browser failed to load the player. I changed this to  <code>"It looks like your browser doesn't support HTML5 audio players. &lt;a href="media/bear.mp3"&gt;Click here to access the file directly.&lt;/a&gt;</code>". I did the same for the audio narration I added to the page. In addition, I added an audio transcription and link to that audio transcription in the paragraph above the player <code>&lt;a href="transcription.html">This link contains a transcription of the audio&lt;/a&gt;.</code>
+</p>
+<h3>Form Changes</h3>
+<p>Previously in the from, "Your name:" and "Your comment:" did not have labels. I corrected that in the manner as described here : <code> &lt;label for="name"&gt;Your name: &lt;/label&gt;</code> and <code>&lt;label for="comment"&gt;Your comment: &lt;/label&gt;</code>
+</p>
+<h3>Comment Control Button Changes</h3>
+<p>I removed the show-hide selector from the css that defined the alignment and width, since it was not needed : <code>.show-hide {text-align: center;  width: 150px;}</code>. Additionally I changed the div to a button: <code> &lt;div class="show-hide"&gtShow comments  &lt;/div&gt</code> to <code> &lt;button class="show-hide"&gtShow comments &lt;/button&gt</code>  
+</p>
+<h3>Table Changes</h3>
+<p>The first change I made to the table was to add a caption explaining the purpose of the table. From a code persective, I changed all the <code>&lt;td&gt;</code> to <code>&lt;th scope="col"&gt;</code> in the table head. Additionally I changed the first column (bear type) <code>&lt;td&gt;</code> to <code>&lt;th scope="row"&gt;</code>.  
+</p>
+<h3>Accessibility Change</h3>
+<p>Two of the accessibility changes that I added to the webpage were to narrate the article itself and add a transcription to the other audio file.</p>
+<h3>Other Changes</h3>
+<p>While not accessibility specific, I changed the pipe <code>|</code> to <code>%7C</code> <code>&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet" type="text/css"&gt;</code> so that the page would fully validate. I also changed the <code>    [if lt IE 9]
+      &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    [endif] </code> to <code>    [if lt IE 9]&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"&gt;&lt;/script&gt;
+    [endif]</code> since the googlecode link 404's. 
+</p>
+</article>
+    </main>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+
+  </body>
+</html>
